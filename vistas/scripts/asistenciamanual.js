@@ -93,9 +93,11 @@ function registrar() {
             if (response.success) {
                 bootbox.alert(response.message);
                 $('#bntregistrar').prop('disabled', false);
+                cancelar();
             } else {
                 bootbox.alert(response.message);
                 $('#bntregistrar').prop('disabled', false);
+                cancelar();
         }
     } else if (xhr.readyState === 4) {
         bootbox.alert("Error en la solicitud: " + xhr.status);
